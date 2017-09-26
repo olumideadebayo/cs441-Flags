@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level" />
+
+    <TextView
+        android:id="@+id/round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="round" />
+
+    <ImageView
+        android:id="@+id/flag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.0"
+        android:src="@drawable/profile" />
+    <ImageView
+        android:id="@+id/flag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.0"
+        android:src="@drawable/profile" />
+    <ImageView
+        android:id="@+id/flag3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.0"
+        android:src="@drawable/profile"/>
+    <ImageView
+        android:id="@+id/flag4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.0"
+        android:src="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/staticMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_region" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Africa" />
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Africa" />
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Africa" />
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Africa" />
+</FrameLayout>

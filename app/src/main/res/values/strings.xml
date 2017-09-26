@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Flags</string>
+    <string name="title_activity_flag">Flag</string>
+    <string name="choose_4_continets">Choose 4 Continents</string>
+    <string name="must_choose_4">You have to choose 4 Continents</string>
+    <string name="level">Level</string>
+    <string name="Round">Round</string>
+    <string name="select_region">Select Region</string>
+
+</resources>
