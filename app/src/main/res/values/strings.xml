@@ -4,7 +4,11 @@
     <string name="choose_4_continets">Choose 4 Continents</string>
     <string name="must_choose_4">You have to choose 4 Continents</string>
     <string name="level">Level</string>
-    <string name="Round">Round</string>
+    <string name="round">Round</string>
+    <string name="game_over">Game Over</string>
     <string name="select_region">Select Region</string>
+    <string name="you_won">You Won</string>
+    <string name="you_lost">You Lost</string>
+    <string name="ok">OK</string>
 
 </resources>

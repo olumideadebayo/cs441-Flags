@@ -43,18 +43,18 @@ public class Splash extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-
-        /*
-        //button onclick listener
-        Button but = findViewById(R.id.action);
-        but.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Splash.this,FlagActivity.class);
-                startActivity(intent);
+        //this path if we're re-starting the game
+        Bundle extras = getIntent().getExtras();
+        if( extras != null){
+            boolean isReStart  =extras.getBoolean("isReStart");
+            if(  isReStart){
+                Log.d("Olu","reStarting game");
+                if( getContinentList()){
+                    showContinentChoices();
+                }
             }
-        });
-        */
+        }
+
     }
 
     @Override
@@ -66,11 +66,6 @@ public class Splash extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-/*
-        Intent intent = new Intent(Splash.this,FlagActivity.class);
-        intent.putExtra("isStart",true);
-        startActivityForResult(intent, 211);
-       */
         if( getContinentList()){
             showContinentChoices();
         }
@@ -101,6 +96,7 @@ public class Splash extends Activity {
         AlertDialog.Builder builder = new AlertDialog.Builder(Splash.this);
         builder.setTitle(R.string.choose_4_continets);
 
+
         builder.setMultiChoiceItems(continents, null, new DialogInterface.OnMultiChoiceClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i, boolean b) {
@@ -119,7 +115,7 @@ public class Splash extends Activity {
                 }
 
                 if(selectionCount>=4 && multiDialog!= null){
-                    Log.d("M",selectionCount+"");
+                    Log.d("Olu",selectionCount+"");
 
                     multiDialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(true);
                 }
@@ -131,7 +127,7 @@ public class Splash extends Activity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if(selectionCount>=4){
-                    Log.d("MM","ready to go to next activity");
+                    Log.d("Olu","ready to go to next activity");
 
                     Intent intent = new Intent(Splash.this,FlagActivity.class);
 
@@ -157,8 +153,6 @@ public class Splash extends Activity {
 
         //actually make the dialog
         multiDialog = builder.create();
-        //done.setCancelable(false);
-        //done.setCanceledOnTouchOutside(false);
         multiDialog.show();
 
         // Initially disable the button
